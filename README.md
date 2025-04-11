@@ -17,9 +17,7 @@ A simple real-time customer service chatbot built with **Node.js**, **Socket.io*
 
 ## 📷 Demo (Screen Recording)
 
-> _[Include your screen-recording video or link here after uploading it, e.g., Loom, YouTube, or GitHub assets]_
-
----
+🎥 [Watch the demo video on Google Drive]([https://drive.google.com/file/d/YOUR_FILE_ID/view](https://drive.google.com/file/d/1ynkup5GKoZwajuihPK-M53oxKYKq3gn1/view?usp=sharing))
 
 ## 🛠 Technologies Used
 
