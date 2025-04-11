@@ -1,39 +1,48 @@
 # 💬 Real-Time Customer Support Chatbot
 
-A simple real-time customer service chatbot built with **Node.js**, **Socket.io**, **MySQL**, **HTML/CSS/JS**. It simulates a customer-agent interaction and supports smart auto-replies using keyword matching.
+A real-time customer service chatbot built with **Node.js**, **Socket.IO**, **MySQL**, and **Vanilla JS**. This project simulates a simple yet functional customer-agent chat system, including smart auto-replies using keyword detection.
 
 ---
 
 ## 🚀 Features
 
-- 🔌 Real-time chat via Socket.IO
-- 🧠 Smart automated replies based on common customer queries
-- 💾 Stores chat history in a MySQL database
-- 🕵️ Shows sender name and timestamp for each message
-- 🌐 Frontend served with static HTML, CSS, and vanilla JavaScript
-- 🔐 Secure environment config using `.env` file
+- 🔌 Real-time messaging with Socket.IO
+- 🤖 Intelligent auto-replies based on keywords
+- 💾 Persistent chat history using MySQL
+- 👤 Message metadata (sender name and timestamp)
+- 🌐 Simple and responsive frontend with HTML/CSS/JS
+- 🔐 Secure configuration with `.env` support
 
 ---
 
-## 📷 Demo (Screen Recording)
+## 📽️ Demo (Screen Recording)
 
-🎥 [Watch the demo video on Google Drive]([https://drive.google.com/file/d/YOUR_FILE_ID/view](https://drive.google.com/file/d/1ynkup5GKoZwajuihPK-M53oxKYKq3gn1/view?usp=sharing))
+🎥 [Watch the demo video on Google Drive](https://drive.google.com/file/d/1ynkup5GKoZwajuihPK-M53oxKYKq3gn1/view?usp=sharing)
+
+---
 
 ## 🛠 Technologies Used
 
-- **Node.js + Express** – Backend server
-- **Socket.IO** – Real-time WebSocket communication
-- **MySQL** – For storing chat messages
-- **HTML/CSS/JS** – Frontend UI
-- **dotenv** – Secure environment variable management
+- **Node.js + Express** – Server-side logic
+- **Socket.IO** – WebSocket-based real-time chat
+- **MySQL** – Database for storing messages
+- **HTML/CSS/JS** – Client-side interface
+- **dotenv** – Environment variable management
 
 ---
 
 ## 📁 Project Structure
 
-project/ ├── server/ │ ├── server.js # Backend logic │ ├── .env # Environment variables (not committed) │ └── public/ # Static frontend files │ └── index.html ├── README.md └── package.json
-
-
+```
+project/
+├── server/
+│   ├── server.js          # Backend logic and socket events
+│   ├── .env               # Environment variables (not pushed to GitHub)
+│   └── public/            # Static frontend files
+│       └── index.html     # Chat UI
+├── README.md
+└── package.json
+```
 
 ---
 
@@ -43,24 +52,26 @@ project/ ├── server/ │ ├── server.js # Backend logic │ ├──
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name/server
+```
 
-2. Install Dependencies
-
+### 2. Install Dependencies
+```bash
 npm install
+```
 
-3. Setup Environment Variables
-Create a .env file inside the server/ folder:
-
+### 3. Setup Environment Variables
+Create a `.env` file inside the `server/` folder:
+```
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_mysql_password
 DB_NAME=chatbotdb
+```
 
-4. Start MySQL and Create Database
-Log into MySQL and create the required table:
-
+### 4. Start MySQL and Create Database
+Login to MySQL and run the following:
+```sql
 CREATE DATABASE chatbotdb;
-
 USE chatbotdb;
 
 CREATE TABLE messages (
@@ -70,31 +81,33 @@ CREATE TABLE messages (
   message TEXT,
   timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
 
-
-5. Start the Server
-
+### 5. Start the Server
+```bash
 node server.js
+```
 
-
-6. Open in Browser
-Go to:
-
+### 6. Open in Browser
+```
 http://localhost:3000
+```
 
-🤖 Test the Bot
-You can try asking the bot things like:
+---
 
-“Hello”
+## 💬 Test the Chatbot
+You can try sending messages like:
+- "Hello"
+- "What are your features?"
+- "I need help"
+- "How can I return an item?"
+- "What is the price?"
+- "How to reset my password?"
 
-“What are your features?”
+The bot will respond with predefined smart replies.
 
-“I need help”
+---
 
-“How can I return an item?”
+## 📄 License
 
-“What is the price?”
-
-“How to reset my password?”
-
-It will respond with a predefined smart message.
+This project is open-source and available under the [MIT License](LICENSE).
